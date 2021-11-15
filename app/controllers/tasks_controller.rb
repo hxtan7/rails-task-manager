@@ -11,14 +11,14 @@ class TasksController < ApplicationController
   end
 
   def new
-    @tasks = Task.new
+    @task = Task.new
   end
 
   def create
-    @tasks = Task.new(task_params)
-    @tasks.save
+    @task = Task.new(task_params)
+    @task.save
 
-    redirect_to task_path(@tasks)
+    redirect_to task_path(@task)
   end
 
   def edit
@@ -27,14 +27,14 @@ class TasksController < ApplicationController
 
   def update
     # @tasks = Task.find(params[:id])
-    @tasks.update(task_params)
+    @task.update(task_params)
 
-    redirect_to task_path(@tasks)
+    redirect_to task_path(@task)
   end
 
   def destroy
     # @tasks = Task.find(params[:id])
-    @tasks.destroy
+    @task.destroy
 
     redirect_to tasks_path
   end
@@ -46,6 +46,6 @@ class TasksController < ApplicationController
   end
 
   def set_task
-    @tasks = Task.find(params[:id])
+    @task = Task.find(params[:id])
   end
 end

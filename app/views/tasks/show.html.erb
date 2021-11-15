@@ -1,12 +1,12 @@
-<h2><strong>To do:</strong> <%= @tasks.title %></h2>
-<p><strong>Description:</strong> <%= @tasks.details %></p>
-<p><strong>Completed?:</strong> <%= @tasks.completed %></p>
+<h2><strong>To do:</strong> <%= @task.title %></h2>
+<p><strong>Description:</strong> <%= @task.details %></p>
+<p><strong>Completed?:</strong> <%= @task.completed %></p>
 
-<%= link_to "Edit #{@tasks.title}",
-            edit_task_path(@tasks) %>
+<%= link_to "Edit #{@task.title}",
+            edit_task_path(@task) %>
 <br>
-<%= link_to "Delete #{@tasks.title}",
-            task_path(@tasks),
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
 <br>
